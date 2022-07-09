@@ -1,0 +1,39 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 87px;
+}
+
+.sidebar_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    justify-content: center;
+    font-size: 15px !important;
+    border-bottom: 1px solid;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.sidebar_list:hover * {
+    color: var(--orange-300);
+}
+
+.sidebar_list div {
+    width: 100%;
+    text-align: center;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.sidebar_list div:first-child {
+    font-size: 20px;
+}

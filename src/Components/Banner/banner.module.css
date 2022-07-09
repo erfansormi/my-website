@@ -1,0 +1,23 @@
+.img_background {
+    background-image: url("../../assets/images/img1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115%;
+    min-height: 100vh;
+}
+
+.banner_description {
+    display: flex;
+    justify-content: center;
+}
+
+.banner_description>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+}
+
+.banner_description>div>div {
+    margin-bottom: 15px;
+}
