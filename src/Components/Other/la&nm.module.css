@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  top: 4px;
+  display: flex;
+  z-index: 10;
+}
+
+.container>div select {
+  border: 0 !important;
+}
+
+.container>div select:hover {
+  animation-name: shadow-anime;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+}
+
+.container>div select:focus {
+  box-shadow: 0 0 10px var(--orange-300) !important;
+}
+
+.dark_select {
+  background-color: var(--bs-gray-500) !important;
+}
+
+/* animations */
+@keyframes shadow-anime {
+  60% {
+    box-shadow: 0 0 15px var(--orange-300), 0 0 30px var(--yellow-850);
+  }
+
+  90% {
+    box-shadow: none;
+  }
+}
