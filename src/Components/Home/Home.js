@@ -6,6 +6,7 @@ import { DataContext } from "../../Context/DataContextProvider";
 //components
 import FixedSideBar from "../Sidebar/FixedSideBar";
 import Banner from "../Banner/Banner";
+import LanguageVSNightMode from "../Other/Language&NightMode";
 
 //css
 import styles from "./home.module.css";
@@ -14,17 +15,21 @@ const Home = () => {
     const { state, setState } = useContext(DataContext);
 
     return (
-        <main dir={`${state.language == "FA" && "rtl"}`}>
+        <>
+            <LanguageVSNightMode />
             <FixedSideBar />
-            <article
+            <main
+                dir={`${state.language == "FA" && "rtl"}`}
                 className={`${state.language == "FA"
-                        ? `${styles.right_margin}`
-                        : `${styles.left_margin}`
+                    ? `${styles.right_margin}`
+                    : `${styles.left_margin}`
                     }`}
             >
-                <Banner />
-            </article>
-        </main>
+                <article>
+                    <Banner />
+                </article>
+            </main>
+        </>
     );
 };
 

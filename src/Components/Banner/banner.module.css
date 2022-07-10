@@ -4,6 +4,12 @@
     background-position: center;
     background-size: 115%;
     min-height: 100vh;
+    position: relative;
+}
+
+.dark_bg {
+    filter: invert(86%) hue-rotate(-193deg) saturate(160%) grayscale(30%) brightness(103%) opacity(50%);
+    -webkit-filter: invert(86%) hue-rotate(-193deg) saturate(160%) grayscale(30%) brightness(103%) opacity(50%);
 }
 
 .banner_description {

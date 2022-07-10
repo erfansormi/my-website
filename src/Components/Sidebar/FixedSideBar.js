@@ -15,7 +15,8 @@ const FixedSideBar = () => {
     return (
         <aside
             className={`${styles.sidebar} ${state.language == "FA" && ""} shadow-lg
-             ${state.darkMode && "text-light bg-dark"}`}
+             ${state.darkMode && "text-light bg-dark"}
+             ${state.language == "FA" && "end-0"}`}
         >
             <ul>
                 {FixedSideBarData[state.language].map((item, index) => (
@@ -28,7 +29,7 @@ const FixedSideBar = () => {
                     </li>
                 ))}
             </ul>
-        </aside>
+        </aside >
     );
 };
 

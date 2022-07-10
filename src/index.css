@@ -1,17 +1,19 @@
+/* fonts */
 @font-face {
   font-family: "sahel";
-  src: url("./assets/fonts/sahel/Farsi-Digits/Sahel-FD.woff") format("woff"),
-    url("./assets/fonts/sahel/Farsi-Digits/Sahel-FD.ttf") format("ttf"),
-    url("./assets/fonts/sahel/Farsi-Digits/Sahel-FD.eot") format("eot");
+  src: url("./assets/fonts/sahel/Sahel.woff") format("woff"),
+    url("./assets/fonts/sahel/Sahel.ttf") format("ttf"),
+    url("./assets/fonts/sahel/Sahel.eot") format("eot");
 }
 
 @font-face {
   font-family: "sahel-bold";
-  src: url("./assets/fonts/sahel/Farsi-Digits/Sahel-Bold-FD.woff") format("woff"),
-    url("./assets/fonts/sahel/Farsi-Digits/Sahel-Bold-FD.ttf") format("ttf"),
-    url("./assets/fonts/sahel/Farsi-Digits/Sahel-Bold-FD.eot") format("eot");
+  src: url("./assets/fonts/sahel/Sahel-Bold.woff") format("woff"),
+    url("./assets/fonts/sahel/Sahel-Bold.ttf") format("ttf"),
+    url("./assets/fonts/sahel/Sahel-Bold.eot") format("eot");
 }
 
+/* variables */
 :root {
   --yellow-850: #f1c40f;
   --yellow-900: #fed330;
@@ -22,6 +24,7 @@
   --transition: 0.4s all cubic-bezier(0.59, -0.17, 0.37, 1.19);
 }
 
+/* styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -48,6 +51,12 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "sahel-bold";
+}
+
+button {
+  padding: 14px 20px !important;
+  font-family: "sahel-bold" !important;
+  text-transform: capitalize !important;
 }
 
 .dark-mode {

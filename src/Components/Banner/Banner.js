@@ -13,10 +13,10 @@ const Banner = () => {
     const { state } = useContext(DataContext)
 
     return (
-        <div className={`row m-0`}>
+        <div className={`row m-0  ${state.darkMode && "text-light bg-dark"}`}>
             <div className={`col-6 ${styles.banner_description}`}>
                 {BannerData[state.language].map((item, index) =>
-                    <div key={index} className="h-100">
+                    <div key={index} className="h-100 text-capitalize">
                         <div>
                             <span>{item.text}</span>
                         </div>
@@ -29,11 +29,22 @@ const Banner = () => {
                         <div>
                             <p>{item.description}</p>
                         </div>
+                        <div className={"d-flex"}>
+                            <div>
+                                <button className='btn btn-outline-warning px-3'>
+                                    {item.btn1}
+                                </button>
+                            </div>
+                            <div className={`${state.language == "FA" ? "me-3" : "ms-3"}`}>
+                                <button className='btn btn-warning px-3'>
+                                    {item.btn2}
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 )}
             </div>
-            <div className={`col-6 ${styles.img_background}`}>
-
+            <div className={`col-6 ${styles.img_background} ${state.darkMode && `${styles.dark_bg}`}`}>
             </div>
         </div>
     )
