@@ -1,0 +1,14 @@
+.head_title_container {
+    width: 100%;
+    /* padding: 10px 60px; */
+    height: 130px;
+}
+
+.head_title_container h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    margin-top: 10px;
+    height: 100%;
+    border-bottom: 1px solid var(--orange-350);
+}
