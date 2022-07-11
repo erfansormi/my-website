@@ -12,6 +12,9 @@ import styles from "./aboutMe.module.css"
 // image
 import myImg from "../../assets/images/img2.jpg"
 
+// file
+import resume from "../../assets/files/resume.pdf"
+
 const AboutMe = ({ titleDes, title, description, ability, btn1 }) => {
     const { state } = useContext(DataContext);
 
@@ -39,9 +42,9 @@ const AboutMe = ({ titleDes, title, description, ability, btn1 }) => {
                         </p>
                     </div>
                     <div>
-                        <button className='btn btn-orange'>
+                        <a href={resume} className='btn btn-orange'>
                             {btn1}
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
