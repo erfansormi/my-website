@@ -57,6 +57,39 @@ button {
   padding: 14px 20px !important;
   font-family: "sahel-bold" !important;
   text-transform: capitalize !important;
+  transition: var(--transition) !important;
+  -webkit-transition: var(--transition) !important;
+  -moz-transition: var(--transition) !important;
+  -ms-transition: var(--transition) !important;
+  -o-transition: var(--transition) !important;
+}
+
+.btn-orange {
+  background-color: var(--orange-350) !important;
+  color: #111 !important;
+  box-shadow: 0 0 0 2px var(--orange-350) !important;
+}
+
+.btn-orange:hover {
+  background-color: transparent !important;
+  color: var(--orange-350) !important;
+  box-shadow: 0 0 0 2px var(--orange-350) !important;
+}
+
+.btn-outline-orange {
+  background-color: transparent !important;
+  color: var(--orange-350) !important;
+  box-shadow: 0 0 0 2px var(--orange-350) !important;
+}
+
+.btn-outline-orange:hover {
+  background-color: var(--orange-350) !important;
+  color: #111 !important;
+}
+
+p {
+  line-height: 1.7;
+  opacity: 75%;
 }
 
 .dark-mode {
