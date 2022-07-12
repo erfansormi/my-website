@@ -20,6 +20,7 @@
   --yellow-950: #fbc531;
   --orange-300: #ffa502;
   --orange-350: #ff9f1a;
+  /* --orange-350: #ffe2b9; */
   --gray-200: #e5e5e5;
   --transition: 0.4s all cubic-bezier(0.59, -0.17, 0.37, 1.19);
 }

@@ -19,16 +19,15 @@ const AboutMe = ({ titleDes, title, description, ability, btn1 }) => {
     const { state } = useContext(DataContext);
 
     return (
-        <div className={`m-0 text-capitalize`}>
+        <div className={`m-0 text-capitalize d-flex flex-column`}>
             <HeadTitle title={title} />
-            <div className={`row`}>
+            <div className={`row align-items-center h-100`}>
                 <div className={`col-5`}>
                     <div className={`${styles.img_container} 
                     ${state.darkMode ? `${styles.dark_shadow}` : `${styles.light_shadow}`}`}>
                         <img className='img-fluid' src={myImg} alt="erfan sormi" />
                     </div>
                 </div>
-
                 <div className={`col-7 ${styles.about_description_container}`}>
                     <div>
                         <h4>{titleDes}</h4>

@@ -1,0 +1,46 @@
+.progress_container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.progress_box {
+    height: 10px !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    overflow: visible !important;
+}
+
+.progress_box>div {
+    border-radius: 0px !important;
+    overflow: visible !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+    background-color: var(--orange-350) !important;
+    position: relative;
+    height: 100%;
+}
+
+.top_value {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    font-size: 15px;
+}
+
+.top_value::after {
+    content: "%";
+}
+
+.top_title {
+    position: absolute;
+    right: 0;
+    font-size: 15px;
+    bottom: 15px;
+    text-transform: capitalize;
+}

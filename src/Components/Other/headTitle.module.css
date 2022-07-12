@@ -1,7 +1,11 @@
 .head_title_container {
     width: 100%;
     /* padding: 10px 60px; */
-    height: 130px;
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    text-transform: capitalize;
 }
 
 .head_title_container h2::after {

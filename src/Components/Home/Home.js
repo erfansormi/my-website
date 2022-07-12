@@ -8,6 +8,7 @@ import FixedSideBar from "../Sidebar/FixedSideBar";
 import Banner from "../Banner/Banner";
 import LanguageVSNightMode from "../Other/Language&NightMode";
 import AboutMeContainer from "./AboutMeContainer";
+import SkillsContainer from "./SkillsContainer";
 
 //css
 import styles from "./home.module.css";
@@ -18,7 +19,7 @@ const Home = () => {
     const mainRef = useRef()
 
     useEffect(() => {
-        // if child == odd => different backgroundColor
+        // if child-index == odd => return different backgroundColor
         const childs = mainRef.current.childNodes;
 
         childs.forEach((item, index) => {
@@ -54,6 +55,9 @@ const Home = () => {
                 </article>
                 <div>
                     <AboutMeContainer />
+                </div>
+                <div className={styles.skills_container}>
+                    <SkillsContainer />
                 </div>
             </main>
         </>
