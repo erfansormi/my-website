@@ -28,7 +28,6 @@
 
 .top_value {
     position: absolute;
-    left: 0;
     bottom: 15px;
     font-size: 15px;
 }
@@ -39,7 +38,6 @@
 
 .top_title {
     position: absolute;
-    right: 0;
     font-size: 15px;
     bottom: 15px;
     text-transform: capitalize;

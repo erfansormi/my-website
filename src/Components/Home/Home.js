@@ -9,6 +9,7 @@ import Banner from "../Banner/Banner";
 import LanguageVSNightMode from "../Other/Language&NightMode";
 import AboutMeContainer from "./AboutMeContainer";
 import SkillsContainer from "./SkillsContainer";
+import PortfolioContainer from "./Portfolios/PortfolioContainer";
 
 //css
 import styles from "./home.module.css";
@@ -58,6 +59,9 @@ const Home = () => {
                 </div>
                 <div className={styles.skills_container}>
                     <SkillsContainer />
+                </div>
+                <div className={styles.portfolios_container}>
+                    <PortfolioContainer />
                 </div>
             </main>
         </>

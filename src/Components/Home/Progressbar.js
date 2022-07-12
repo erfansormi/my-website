@@ -16,10 +16,16 @@ const Progressbar = ({ value, title }) => {
                     role="progressbar" style={{ width: `${value}%` }}
                     aria-valuenow={value}
                     aria-valuemin={0} aria-valuemax={100}>
-                    <div className={`${state.darkMode ? "text-light" : "text-dark"} ${styles.top_value}`}>
+
+                    <div className={`${state.darkMode ? "text-light" : "text-dark"} 
+                    ${styles.top_value}
+                    ${state.language == "FA" ? "start-0" : "end-0"}`}>
                         {value}
                     </div>
-                    <div className={`${state.darkMode ? "text-light" : "text-dark"} ${styles.top_title}`}>
+
+                    <div className={`${state.darkMode ? "text-light" : "text-dark"} 
+                    ${styles.top_title}
+                    ${state.language == "FA" ? "end-0" : "start-0"}`}>
                         {title}
                     </div>
                 </div>

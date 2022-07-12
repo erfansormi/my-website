@@ -11,6 +11,11 @@
     min-height: 500px !important;
 }
 
+.portfolios_container{
+    height: 100% !important;
+    min-height: 800px !important;
+}
+
 .right_margin {
     margin-right: 87px;
 }
