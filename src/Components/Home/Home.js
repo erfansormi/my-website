@@ -10,12 +10,13 @@ import LanguageVSNightMode from "../Other/Language&NightMode";
 import AboutMeContainer from "./AboutMeContainer";
 import SkillsContainer from "./SkillsContainer";
 import PortfolioContainer from "./Portfolios/PortfolioContainer";
+import ContactContainer from "./ContactMe/ContactContainer";
 
 //css
 import styles from "./home.module.css";
 
 const Home = () => {
-    const { state, setState } = useContext(DataContext);
+    const { state } = useContext(DataContext);
 
     const mainRef = useRef()
 
@@ -62,6 +63,9 @@ const Home = () => {
                 </div>
                 <div className={styles.portfolios_container}>
                     <PortfolioContainer />
+                </div>
+                <div>
+                    <ContactContainer />
                 </div>
             </main>
         </>

@@ -1,0 +1,32 @@
+.mixed_style {
+    border: none;
+    background-color: transparent;
+    caret-color: #999;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.mixed_style::placeholder {
+    color: #999;
+}
+
+.dark_input {
+    border-bottom: 1px solid #555;
+    height: 40px;
+}
+
+.light_input {
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+}
+
+.dark_area {
+    border-bottom: 1px solid #555;
+    height: 80px;
+}
+
+.light_area {
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+}
