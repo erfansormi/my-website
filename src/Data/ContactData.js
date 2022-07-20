@@ -6,17 +6,21 @@ export const ContactData = {
     FA: [
         {
             title: "تماس با من",
-            btn:"ارسال",
+            btn: "ارسال",
             icons: [
                 {
                     title: "تلفن",
                     description: "09399112453",
-                    icon: <IoCallSharp />
+                    icon: <IoCallSharp />,
+                    type: "link",
+                    href: "tel:+09399112453"
                 },
                 {
                     title: "ایمیل",
                     description: "erfansormi97@gmail.com",
-                    icon: <MdEmail />
+                    icon: <MdEmail />,
+                    type: "link",
+                    href: "mailto:erfansormi97@gmail.com"
                 },
                 {
                     title: "آدرس",
@@ -27,19 +31,23 @@ export const ContactData = {
             inputs: [
                 {
                     type: "text",
-                    placeHolder: "نام"
+                    placeHolder: "نام",
+                    name: "name"
                 },
                 {
                     type: "email",
-                    placeHolder: "ایمیل"
+                    placeHolder: "ایمیل",
+                    name: "email"
                 },
                 {
                     type: "text",
-                    placeHolder: "موضوع"
+                    placeHolder: "موضوع",
+                    name: "subject"
                 },
                 {
                     type: "area",
-                    placeHolder: "متن پیام"
+                    placeHolder: "متن پیام",
+                    name: "message"
                 },
             ]
         }
@@ -47,17 +55,21 @@ export const ContactData = {
     EN: [
         {
             title: "contact me",
-            btn:"send",
+            btn: "send",
             icons: [
                 {
                     title: "phone",
                     description: "09399112453",
-                    icon: <IoCallSharp />
+                    icon: <IoCallSharp />,
+                    type: "link",
+                    href: "tel:+"
                 },
                 {
                     title: "email",
                     description: "erfansormi97@gmail.com",
-                    icon: <MdEmail />
+                    icon: <MdEmail />,
+                    type: "link",
+                    href: "mailto:"
                 },
                 {
                     title: "address",

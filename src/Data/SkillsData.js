@@ -7,7 +7,7 @@ export const SkillData = {
         },
         {
             skill: "css",
-            skill_value: 78,
+            skill_value: 80,
         },
         {
             skill: "بوت استرپ",
@@ -34,7 +34,7 @@ export const SkillData = {
         },
         {
             skill: "css",
-            skill_value: 78,
+            skill_value: 80,
         },
         {
             skill: "bootstrap",
