@@ -11,6 +11,7 @@ import AboutMeContainer from "./AboutMeContainer";
 import SkillsContainer from "./SkillsContainer";
 import PortfolioContainer from "./Portfolios/PortfolioContainer";
 import ContactContainer from "./ContactMe/ContactContainer";
+import Footer from "./Footer/Footer"
 
 //css
 import styles from "./home.module.css";
@@ -67,6 +68,9 @@ const Home = () => {
                 <div id="contact">
                     <ContactContainer />
                 </div>
+                <footer className={styles.footer_container}>
+                    <Footer />
+                </footer>
             </main>
         </>
     );

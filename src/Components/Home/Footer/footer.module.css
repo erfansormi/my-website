@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons_container{
+    display: flex;
+}
+
+.icons_container>div{
+    margin: 0 8px;
+    font-size: 25px;
+}
+
+.icons_container>div>a{
+    color: inherit;
+    opacity: 65%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.icons_container>div>a:hover{
+    opacity: 100%;
+}
