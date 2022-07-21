@@ -52,19 +52,19 @@ const Home = () => {
                     ${styles.main}
                     main-element`}
             >
-                <article>
+                <article id="home">
                     <Banner />
                 </article>
-                <div>
+                <div id="about">
                     <AboutMeContainer />
                 </div>
-                <div className={styles.skills_container}>
+                <div className={styles.skills_container} id="skills">
                     <SkillsContainer />
                 </div>
-                <div className={styles.portfolios_container}>
+                <div className={styles.portfolios_container} id="portfolio">
                     <PortfolioContainer />
                 </div>
-                <div>
+                <div id="contact">
                     <ContactContainer />
                 </div>
             </main>

@@ -108,7 +108,7 @@ const ContactMe = ({ item }) => {
                                 {item.icon}
                             </div>
                             <div>
-                                <div>
+                                <div className="text-capitalize">
                                     <h5>
                                         {item.title}
                                     </h5>

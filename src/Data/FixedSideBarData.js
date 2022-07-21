@@ -8,45 +8,55 @@ export const FixedSideBarData = {
     FA: [
         {
             icon: <ImHome />,
-            text: "صفحه اصلی"
+            text: "صفحه اصلی",
+            link:"home"
         },
         {
             icon: <RiContactsFill />,
-            text: "درباره من"
+            text: "درباره من",
+            link:"about"
         },
         {
             icon: <BsBarChartFill />,
-            text: "مهارت ها"
+            text: "مهارت ها",
+            link:"skills"
         },
         {
             icon: <GiHandBag />,
-            text: "نمونه کارها"
+            text: "نمونه کارها",
+            link:"portfolio"
         },
         {
             icon: <IoCallSharp />,
-            text: "تماس با من"
+            text: "تماس با من",
+            link:"contact"
         },
     ],
     EN: [
         {
             icon: <ImHome />,
-            text: "home"
+            text: "home",
+            link:"home"
         },
         {
             icon: <RiContactsFill />,
-            text: "about me"
+            text: "about me",
+            link:"about"
         },
         {
             icon: <BsBarChartFill />,
-            text: "skills"
+            text: "skills",
+            link:"skills"
         },
         {
             icon: <GiHandBag />,
-            text: "portfolio"
+            text: "portfolio",
+            link:"portfolio"
         },
         {
             icon: <IoCallSharp />,
-            text: "contact"
+            text: "contact",
+            link:"contact"
         },
     ]
 }

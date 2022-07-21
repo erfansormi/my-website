@@ -97,11 +97,11 @@ p {
   opacity: 75%;
 }
 
-.dark-mode {
+.border-dark-mode {
   border-color: #444 !important;
 }
 
-.light-mode {
+.border-light-mode {
   border-color: var(--gray-200) !important;
 }
 

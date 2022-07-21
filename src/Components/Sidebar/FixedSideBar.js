@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { NavLink, useLocation } from "react-router-dom"
 
 //context
 import { DataContext } from "../../Context/DataContextProvider";
@@ -10,7 +11,12 @@ import styles from "./fixedSidebar.module.css";
 import { FixedSideBarData } from "../../Data/FixedSideBarData";
 
 const FixedSideBar = () => {
-    const { state, setState } = useContext(DataContext);
+    const { state } = useContext(DataContext);
+    let location = useLocation()
+
+    const handleLink = (item) => {
+        window.location.hash = item.link;
+    }
 
     return (
         <aside
@@ -20,13 +26,22 @@ const FixedSideBar = () => {
         >
             <ul>
                 {FixedSideBarData[state.language].map((item, index) => (
-                    <li key={index} className={`${styles.sidebar_list}
-                     ${state.darkMode ? "dark-mode" : "light-mode"}`}>
+                    <NavLink
+                        to={item.link}
+                        onClick={() => handleLink(item)}
+                        key={index}
+                        className={`${styles.sidebar_list}
+                                ${state.darkMode ? "border-dark-mode text-light"
+                                : "border-light-mode text-dark"}
+                                ${window.location.pathname.includes(`${item.link}`)
+                                ? `${styles.active_link}`
+                                : ""}`}
+                    >
                         <div>{item.icon}</div>
                         <div>
                             <span>{item.text}</span>
                         </div>
-                    </li>
+                    </NavLink>
                 ))}
             </ul>
         </aside >
