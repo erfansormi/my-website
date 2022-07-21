@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 
 //context
-import { DataContext } from '../../Context/DataContextProvider'
+import { DataContext } from '../../../Context/DataContextProvider'
 
 //css
 import styles from "./banner.module.css"
 
 //data
-import { BannerData } from '../../Data/BannerData'
+import { BannerData } from '../../../Data/BannerData'
 
 const Banner = () => {
     const { state } = useContext(DataContext)

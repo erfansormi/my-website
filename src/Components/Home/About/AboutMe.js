@@ -1,19 +1,19 @@
 import React, { useContext } from 'react'
 
 // context
-import { DataContext } from '../../Context/DataContextProvider'
+import { DataContext } from '../../../Context/DataContextProvider'
 
 // components
-import HeadTitle from '../Other/HeadTitle';
+import HeadTitle from '../../Other/HeadTitle';
 
 // css
 import styles from "./aboutMe.module.css"
 
 // image
-import myImg from "../../assets/images/img2.jpg"
+import myImg from "../../../assets/images/img2.jpg"
 
 // file
-import resume from "../../assets/files/resume.pdf"
+import resume from "../../../assets/files/resume.pdf"
 
 const AboutMe = ({ titleDes, title, description, ability, btn1 }) => {
     const { state } = useContext(DataContext);

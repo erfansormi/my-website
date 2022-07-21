@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 
 // context
-import { DataContext } from '../../Context/DataContextProvider'
+import { DataContext } from '../../../Context/DataContextProvider';
 
 // components
-import AboutMe from './AboutMe'
+import AboutMe from './AboutMe';
 
 // data
-import { AboutData } from '../../Data/AboutData'
+import { AboutData } from '../../../Data/AboutData';
 
 const AboutMeContainer = () => {
     const { state } = useContext(DataContext);
@@ -15,7 +15,8 @@ const AboutMeContainer = () => {
     return (
         <>
             {AboutData[state.language].map((item, index) =>
-                <AboutMe description={item.description}
+                <AboutMe
+                    description={item.description}
                     key={index}
                     title={item.title}
                     titleDes={item.titleDes}

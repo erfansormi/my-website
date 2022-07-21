@@ -5,10 +5,10 @@ import { DataContext } from "../../Context/DataContextProvider";
 
 //components
 import FixedSideBar from "../Sidebar/FixedSideBar";
-import Banner from "../Banner/Banner";
+import Banner from "./Banner/Banner";
 import LanguageVSNightMode from "../Other/Language&NightMode";
-import AboutMeContainer from "./AboutMeContainer";
-import SkillsContainer from "./SkillsContainer";
+import AboutMeContainer from "./About/AboutMeContainer";
+import SkillsContainer from "./Skills/SkillsContainer";
 import PortfolioContainer from "./Portfolios/PortfolioContainer";
 import ContactContainer from "./ContactMe/ContactContainer";
 import Footer from "./Footer/Footer"

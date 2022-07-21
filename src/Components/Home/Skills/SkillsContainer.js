@@ -1,14 +1,14 @@
 import React, { useContext } from 'react'
 
 // data
-import { SkillData } from '../../Data/SkillsData'
+import { SkillData } from '../../../Data/SkillsData'
 
 // context
-import { DataContext } from "../../Context/DataContextProvider"
+import { DataContext } from "../../../Context/DataContextProvider"
 
 // components
 import Skills from './Skills'
-import HeadTitle from "../Other/HeadTitle"
+import HeadTitle from "../../Other/HeadTitle"
 
 const SkillsContainer = () => {
     const { state } = useContext(DataContext)

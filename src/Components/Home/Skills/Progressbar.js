@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 // context
-import { DataContext } from '../../Context/DataContextProvider'
+import { DataContext } from '../../../Context/DataContextProvider'
 
 // css
 import styles from "./progressbar.module.css"
