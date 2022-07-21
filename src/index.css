@@ -104,3 +104,20 @@ p {
 .light-mode {
   border-color: var(--gray-200) !important;
 }
+
+.MuiAlert-action.css-ki1hdl-MuiAlert-action {
+  padding: 0;
+}
+
+.MuiAlert-action.css-ki1hdl-MuiAlert-action button {
+  padding: 14px !important;
+  margin: 0 4px;
+}
+
+.MuiAlert-message.css-1pxa9xg-MuiAlert-message {
+  margin: 0 15px !important;
+}
+
+.MuiAlert-icon.css-1ytlwq5-MuiAlert-icon {
+  padding: 7px;
+}

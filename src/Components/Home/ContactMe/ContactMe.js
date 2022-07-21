@@ -1,4 +1,4 @@
-import React, { useRef , useState , useEffect } from 'react'
+import React, { useRef, useState, useContext } from 'react'
 
 // emeiljs
 import emailjs from "@emailjs/browser"
@@ -6,12 +6,20 @@ import emailjs from "@emailjs/browser"
 // components
 import HeadTitle from '../../Other/HeadTitle'
 import Input from '../../Other/Input';
+import Loading from "../../Loading/Loading"
+import Notif from "../../Notification/Notif"
+
+// context
+import { DataContext } from '../../../Context/DataContextProvider';
 
 //css 
 import styles from "./contact.module.css"
 
 const ContactMe = ({ item }) => {
+    const { state } = useContext(DataContext);
+
     const { title, icons, inputs, btn } = item;
+
     const form = useRef();
 
     // state
@@ -22,18 +30,18 @@ const ContactMe = ({ item }) => {
         message: ""
     })
 
-    useEffect(() => {
-        console.log(inputValue)
-    }, [inputValue])
+    const [loading, setLoading] = useState(false)
+    const [notif, setNotif] = useState(false)
 
     // functions
     const handleChange = (e) => {
         setInputValue({ ...inputValue, [e.target.name]: e.target.value })
     }
 
-    
+
     const sendEmail = (e) => {
         e.preventDefault();
+        setLoading(true)
 
         emailjs.sendForm('service_9jaj78h', 'template_475lwnd', form.current, 'EuTWTWO2NCl2lVsaX')
             .then((result) => {
@@ -43,7 +51,8 @@ const ContactMe = ({ item }) => {
                     subject: "",
                     message: ""
                 })
-                alert("your email sented")
+                setLoading(false)
+                setNotif(true)
             }, (error) => {
                 console.log(error.text);
             });
@@ -63,21 +72,21 @@ const ContactMe = ({ item }) => {
                                 <div
                                     className={`col-6`}
                                     key={index}>
-                                    <Input value={inputValue[item.name]} 
-                                    handleChange={handleChange}
-                                    htmlName={item.name}
-                                    type={item.type}
-                                    text={item.placeHolder} />
+                                    <Input value={inputValue[item.name]}
+                                        handleChange={handleChange}
+                                        htmlName={item.name}
+                                        type={item.type}
+                                        text={item.placeHolder} />
                                 </div>
                                 :
                                 <div
                                     className={`col-12`}
                                     key={index}>
-                                    <Input value={inputValue[item.name]} 
-                                    handleChange={handleChange} 
-                                    htmlName={item.name} 
-                                    type={item.type} 
-                                    text={item.placeHolder} />
+                                    <Input value={inputValue[item.name]}
+                                        handleChange={handleChange}
+                                        htmlName={item.name}
+                                        type={item.type}
+                                        text={item.placeHolder} />
                                 </div>
                         )}
                         <div className='mt-3'>
@@ -112,7 +121,7 @@ const ContactMe = ({ item }) => {
                                             {item.description}
                                         </a>
                                         :
-                                        <span 
+                                        <span
                                             className={`text-light opacity-50`}>
                                             {item.description}
                                         </span>
@@ -123,6 +132,22 @@ const ContactMe = ({ item }) => {
                     )}
                 </div>
             </div>
+
+            {/* loading */}
+            {loading &&
+                <Loading loading={loading} setLoading={setLoading} />
+            }
+
+            {/* notif */}
+            {
+                notif &&
+                <Notif
+                    notif={notif}
+                    message={`${state.language == "FA" ? "ایمیل با موفقیت فرستاده شد!" : ""}
+                    ${state.language == "EN" ? "Email Sented Successfully!" : ""} `}
+                    setNotif={setNotif}
+                />
+            }
         </div>
     )
 }
