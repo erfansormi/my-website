@@ -9,11 +9,15 @@ import styles from "./banner.module.css"
 //data
 import { BannerData } from '../../../Data/BannerData'
 
+// aos
+import AOS from "aos"
+
 const Banner = () => {
     const { state } = useContext(DataContext)
-
+    AOS.init()
+    
     return (
-        <div className={`row m-0`}>
+        <div className={`row m-0`} data-aos="fade-up">
             <div className={`col-6 ${styles.banner_description}`}>
                 {BannerData[state.language].map((item, index) =>
                     <div key={index} className="h-100 text-capitalize">

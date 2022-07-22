@@ -15,8 +15,8 @@ const SkillsContainer = () => {
 
     return (
         <div className='w-100 row'>
-            <HeadTitle title={SkillData[state.language][0].title} />
-            {SkillData[state.language].map((item, index) =>
+            <HeadTitle title={SkillData[state.language].title} />
+            {SkillData[state.language].skills.map((item, index) =>
                 <Skills key={index}
                     skill={item.skill}
                     skill_value={item.skill_value}

@@ -18,9 +18,9 @@ const PortfolioContainer = () => {
 
     return (
         <div className={`${styles.container}`}>
-            <HeadTitle title={PortfolioData[state.language][0].mainTitle} />
+            <HeadTitle title={PortfolioData[state.language].title} />
             <div className={`${styles.portfolios_container} row`}>
-                {PortfolioData[state.language].map((item, index) =>
+                {PortfolioData[state.language].portfolios.map((item, index) =>
                     <Portfolio key={index}
                         img={item.img}
                         title={item.title}

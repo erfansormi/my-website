@@ -18,7 +18,7 @@ import styles from "./home.module.css";
 
 const Home = () => {
     const { state } = useContext(DataContext);
-
+    
     const mainRef = useRef()
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const Home = () => {
                     ${styles.main}
                     main-element`}
             >
-                <article id="home">
+                <article id="home" >
                     <Banner />
                 </article>
                 <div id="about">

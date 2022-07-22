@@ -3,12 +3,16 @@ import React, { useContext } from 'react'
 // context
 import { DataContext } from '../../../Context/DataContextProvider'
 
+// aos
+import Aos from 'aos'
+
 // css
 import styles from "./progressbar.module.css"
 
 const Progressbar = ({ value, title }) => {
     const { state } = useContext(DataContext)
-
+    Aos.init();
+    
     return (
         <div className={`w-100 ${styles.progress_container}`}>
             <div className={`progress w-100 ${styles.progress_box}`}>

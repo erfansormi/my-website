@@ -2,7 +2,7 @@ import * as React from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-export default function SimpleSnackbar({ message, notif, setNotif , language }) {
+export default function SimpleSnackbar({ message, notif, setNotif, bgColor, muiColor }) {
     const [vertical, setVertical] = React.useState("top")
     const [horizontal, setHorizontal] = React.useState("center")
 
@@ -32,10 +32,10 @@ export default function SimpleSnackbar({ message, notif, setNotif , language }) 
             >
                 <Alert
                     onClose={handleClose}
-                    severity="success"
+                    severity={muiColor}
                     sx={{
                         width: '100%',
-                        backgroundColor: "var(--orange-300)",
+                        backgroundColor: bgColor,
                         color: "#000",
                         fontWeight: "bold",
                         display: "flex",

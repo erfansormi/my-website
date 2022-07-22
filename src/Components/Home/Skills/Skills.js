@@ -3,12 +3,16 @@ import React from 'react'
 // components
 import Progressbar from "./Progressbar"
 
-const Skills = ({ skill_value, skill }) => {
+// aos
+import AOS from "aos"
 
+const Skills = ({ skill_value, skill }) => {
+    AOS.init()
+    
     return (
         <div className="d-flex flex-column col-6">
             <div className='align-items-center row'>
-                <div className={`col-11`}>
+                <div className={`col-11`} data-aos="fade-up">
                     <Progressbar value={skill_value} title={skill} />
                 </div>
             </div>
