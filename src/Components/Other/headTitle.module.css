@@ -16,3 +16,9 @@
     height: 100%;
     border-bottom: 1px solid var(--orange-350);
 }
+
+@media (max-width:765px) {
+    .head_title_container{
+        align-items: center;
+    }
+}

@@ -69,6 +69,13 @@ button, a.btn {
   -o-transition: var(--transition) !important;
 }
 
+@media (max-width:767px) {
+  button, a.btn {
+    font-size: 14px !important;
+    padding: 12px 14px !important;
+  }
+}
+
 .btn-orange {
   background-color: var(--orange-350) !important;
   color: #111 !important;

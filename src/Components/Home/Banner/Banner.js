@@ -15,10 +15,10 @@ import AOS from "aos"
 const Banner = () => {
     const { state } = useContext(DataContext)
     AOS.init()
-    
+
     return (
-        <div className={`row m-0`} data-aos="fade-up">
-            <div className={`col-6 ${styles.banner_description}`}>
+        <div className={`row flex-column-reverse flex-lg-row ${styles.container}`}>
+            <div className={`col-lg-6 col-12 ${styles.banner_description}`} data-aos="fade-up">
                 {BannerData[state.language].map((item, index) =>
                     <div key={index} className="h-100 text-capitalize">
                         <div>
@@ -48,7 +48,8 @@ const Banner = () => {
                     </div>
                 )}
             </div>
-            <div className={`col-6 ${styles.img_background} ${state.darkMode && `${styles.dark_bg}`}`}>
+            <div className={`col-lg-6 col-12 ${styles.img_background} 
+            ${state.darkMode && `${styles.dark_bg}`}`} data-aos="fade-up">
             </div>
         </div>
     )

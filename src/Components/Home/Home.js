@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 //context
 import { DataContext } from "../../Context/DataContextProvider";
@@ -18,7 +18,9 @@ import styles from "./home.module.css";
 
 const Home = () => {
     const { state } = useContext(DataContext);
-    
+
+    const [width, setWidth] = useState(window.innerWidth)
+
     const mainRef = useRef()
 
     useEffect(() => {
@@ -36,7 +38,15 @@ const Home = () => {
                 }
             }
         });
-    })
+
+        // update width page
+        const resize = () => {
+            setWidth(window.innerWidth)
+        }
+
+        window.addEventListener("resize", resize)
+
+    }, [window.innerWidth])
 
     return (
         <>
@@ -45,10 +55,10 @@ const Home = () => {
             <main
                 ref={mainRef}
                 dir={`${state.language == "FA" && "rtl"}`}
-                className={`${state.language == "FA"
-                    ? `${styles.right_margin}`
-                    : `${styles.left_margin}`
-                    }
+                className={`
+                ${state.language == "FA" && width >= 768 && `${styles.right_margin}`}
+                ${state.language != "FA" && width >= 768 && `${styles.left_margin}`}
+                ${width < 768 && `${styles.bottom_margin}`}
                     ${state.darkMode && "text-light bg-dark"} 
                     ${styles.main}
                     main-element`}

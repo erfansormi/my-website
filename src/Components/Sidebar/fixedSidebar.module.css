@@ -40,6 +40,22 @@
     font-size: 20px;
 }
 
-.active_link , .active_link *{
+.active_link, .active_link * {
     color: var(--orange-300) !important;
+}
+
+.sm_sidebar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: 99;
+
+}
+
+.sm_sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }

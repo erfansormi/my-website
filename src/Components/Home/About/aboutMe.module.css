@@ -26,4 +26,17 @@
 
 .img_container img {
     max-width: 300px !important;
+    width: 100%;
+}
+
+@media (max-width:765px) {
+    .img_container img {
+        max-width: 200px !important;
+    }
+}
+
+@media (max-width:991px) {
+    .img_container img{
+        max-width: 250px;
+    }
 }
