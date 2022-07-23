@@ -1,10 +1,10 @@
 .head_title_container {
     width: 100%;
     /* padding: 10px 60px; */
-    height: 140px;
+    height: 160px !important;
     display: flex;
-    align-items: flex-end;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 30px;
     text-transform: capitalize;
 }
 
@@ -17,8 +17,8 @@
     border-bottom: 1px solid var(--orange-350);
 }
 
-@media (max-width:765px) {
+/* @media (max-width:765px) {
     .head_title_container{
         align-items: center;
     }
-}
+} */

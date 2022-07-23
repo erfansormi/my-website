@@ -43,7 +43,7 @@ const ContactMe = ({ item }) => {
                 />
 
                 {/* icons */}
-                <div className={`col-4`}>
+                <div className={`col-lg-5 col-xl-4 col-12 p-0 px-lg-3 px-xxl-4 mt-4 mt-lg-0`}>
                     {icons.map((item, index) =>
                         <Icons
                             key={index}

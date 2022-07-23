@@ -57,7 +57,7 @@ const Inputs = ({ inputs, btn, setLoading, setNotif, setErrorSendEmail }) => {
     };
 
     return (
-        <div className={`col-8 ${styles.inputs_container} shadow`}>
+        <div className={`col-lg-7 col-xl-8 col-12 ${styles.inputs_container} shadow`}>
             <form ref={form} onSubmit={sendEmail}
                 className="col-12 row gx-4">
                 {inputs.map((item, index) =>

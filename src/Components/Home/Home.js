@@ -46,7 +46,7 @@ const Home = () => {
 
         window.addEventListener("resize", resize)
 
-    }, [window.innerWidth])
+    }, [window.innerWidth, state])
 
     return (
         <>
@@ -56,12 +56,11 @@ const Home = () => {
                 ref={mainRef}
                 dir={`${state.language == "FA" && "rtl"}`}
                 className={`
-                ${state.language == "FA" && width >= 768 && `${styles.right_margin}`}
-                ${state.language != "FA" && width >= 768 && `${styles.left_margin}`}
-                ${width < 768 && `${styles.bottom_margin}`}
+                    ${state.language == "FA" && width >= 768 && `${styles.right_margin}`}
+                    ${state.language != "FA" && width >= 768 && `${styles.left_margin}`}
                     ${state.darkMode && "text-light bg-dark"} 
                     ${styles.main}
-                    main-element`}
+                `}
             >
                 <article id="home" >
                     <Banner />
@@ -78,10 +77,17 @@ const Home = () => {
                 <div id="contact">
                     <ContactContainer />
                 </div>
-                <footer className={styles.footer_container}>
-                    <Footer />
-                </footer>
             </main>
+            <footer
+                dir={`${state.language == "FA" && "rtl"}`}
+                className={`
+                    ${state.darkMode ? "text-light bg-dark" : "text-dark bg-light"}
+                    ${state.language == "FA" && width >= 768 && `${styles.right_margin}`}
+                    ${state.language != "FA" && width >= 768 && `${styles.left_margin}`}
+                    ${styles.footer}
+                `}>
+                <Footer />
+            </footer>
         </>
     );
 };

@@ -14,7 +14,7 @@ const Portfolio = ({ link, img, title }) => {
     AOS.init()
     
     return (
-        <section className={`col-4 g-4 ${styles.portfolio_container}`} data-aos="fade-up">
+        <section className={`col-lg-4 col-sm-6 col-12 g-4 ${styles.portfolio_container}`} data-aos="fade-up">
             <div className='w-100'>
                 <img
                     className="img-fluid"

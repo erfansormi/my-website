@@ -17,14 +17,17 @@ const Icons = ({ icon, title, href, type, description }) => {
                 </div>
                 <div>
                     {type == "link" ?
-                        <a href={href}
+                        <a
+                            style={{ color: "inherit" }}
+                            href={href}
                             className={`${styles.contact_me_link}
-                                            text-light opacity-50`}>
+                                            opacity-75`}>
                             {description}
                         </a>
                         :
                         <span
-                            className={`text-light opacity-50`}>
+                            style={{ color: "inherit" }}
+                            className={`opacity-75`}>
                             {description}
                         </span>
                     }
