@@ -1,0 +1,42 @@
+.inputs_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.icon_container {
+    display: flex;
+    padding: 10px;
+    height: 100px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.icon_container>div:first-child {
+    background-color: var(--orange-350);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.contact_me_link {
+    text-decoration: none;
+}
+
+.contact_me_link:hover{
+    text-decoration: underline;
+}

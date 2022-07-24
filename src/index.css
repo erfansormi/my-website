@@ -1,0 +1,130 @@
+/* fonts */
+@font-face {
+  font-family: "sahel";
+  src: url("./assets/fonts/sahel/Sahel.woff") format("woff"),
+    url("./assets/fonts/sahel/Sahel.ttf") format("ttf"),
+    url("./assets/fonts/sahel/Sahel.eot") format("eot");
+}
+
+@font-face {
+  font-family: "sahel-bold";
+  src: url("./assets/fonts/sahel/Sahel-Bold.woff") format("woff"),
+    url("./assets/fonts/sahel/Sahel-Bold.ttf") format("ttf"),
+    url("./assets/fonts/sahel/Sahel-Bold.eot") format("eot");
+}
+
+/* variables */
+:root {
+  --yellow-850: #f1c40f;
+  --yellow-900: #fed330;
+  --yellow-950: #fbc531;
+  --orange-300: #ffa502;
+  --orange-350: #ff9f1a;
+  /* --orange-350: #ffe2b9; */
+  --gray-200: #e5e5e5;
+  --transition: 0.5s all cubic-bezier(0.59, -0.17, 0.37, 1.19) !important;
+}
+
+/* styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+* {
+  font-family: "sahel";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "sahel-bold";
+}
+
+input, textarea {
+  outline: none;
+}
+
+button, a.btn {
+  padding: 14px 20px !important;
+  font-family: "sahel-bold" !important;
+  text-transform: capitalize !important;
+  transition: var(--transition) !important;
+  -webkit-transition: var(--transition) !important;
+  -moz-transition: var(--transition) !important;
+  -ms-transition: var(--transition) !important;
+  -o-transition: var(--transition) !important;
+}
+
+@media (max-width:767px) {
+  button, a.btn {
+    font-size: 14px !important;
+    padding: 12px 14px !important;
+  }
+}
+
+.btn-orange {
+  background-color: var(--orange-350) !important;
+  color: #111 !important;
+  box-shadow: 0 0 0 2px var(--orange-350) !important;
+}
+
+.btn-orange:hover {
+  background-color: transparent !important;
+  color: var(--orange-350) !important;
+  box-shadow: 0 0 0 2px var(--orange-350) !important;
+}
+
+.btn-outline-orange {
+  background-color: transparent !important;
+  color: var(--orange-350) !important;
+  box-shadow: 0 0 0 2px var(--orange-350) !important;
+}
+
+.btn-outline-orange:hover {
+  background-color: var(--orange-350) !important;
+  color: #111 !important;
+}
+
+p {
+  line-height: 1.7;
+  opacity: 75%;
+}
+
+.border-dark-mode {
+  border-color: #444 !important;
+}
+
+.border-light-mode {
+  border-color: var(--gray-200) !important;
+}
+
+.MuiAlert-action.css-ki1hdl-MuiAlert-action {
+  padding: 0;
+}
+
+.MuiAlert-action.css-ki1hdl-MuiAlert-action button {
+  padding: 14px !important;
+  margin: 0 4px;
+}
+
+.MuiAlert-message.css-1pxa9xg-MuiAlert-message {
+  margin: 0 15px !important;
+}
+
+.MuiAlert-icon.css-1ytlwq5-MuiAlert-icon {
+  padding: 7px;
+}

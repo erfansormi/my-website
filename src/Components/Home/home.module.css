@@ -1,0 +1,65 @@
+.main>article, .main>div {
+    height: 100%;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    padding: 0 100px;
+}
+
+@media (max-width:767px) {
+    .main>article, .main>div, main>footer {
+        padding: 0 40px;
+    }
+}
+
+.skills_container {
+    height: 100% !important;
+    min-height: 500px !important;
+    padding-bottom: 60px !important;
+}
+
+.portfolios_container {
+    height: 100% !important;
+    min-height: 800px !important;
+    padding-bottom: 70px !important;
+}
+
+.footer {
+    height: 80px !important;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+@media (max-width:767px) {
+    .footer {
+        padding: 0 !important;
+        margin-bottom: 100px;
+    }
+
+    .footer>div {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width:575px) {
+    .footer {
+        padding: 0 !important;
+    }
+
+    .footer>div {
+        padding: 0 25px;
+    }
+}
+
+.right_margin {
+    margin-right: 87px;
+}
+
+.left_margin {
+    margin-left: 87px;
+}
+
+.bottom_margin {
+    margin-bottom: 70px;
+}
