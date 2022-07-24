@@ -10,7 +10,7 @@ import Home from './Components/Home/Home'
 const App = () => {
 
   return (
-    <DataContextProvider >
+    <DataContextProvider>
       <Home />
     </DataContextProvider>
   )
